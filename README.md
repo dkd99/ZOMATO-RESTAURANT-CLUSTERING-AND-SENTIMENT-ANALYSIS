@@ -37,6 +37,53 @@ Data could be used for sentiment analysis. Also the metadata of reviewers can be
 
 7. Pictures : No. of pictures posted with review
 
+# Project Summary
+**This problem contain two dataframes -**
+
+*   **Zomato restaurant  data ** which contains all informations about the restaurants that are available on zomato,Cuisines they serve, per person cost of dining.
+*   **User review collection df** which contains the ratings,reviews given by users to different restaurants.
+
+**Clustering **-
+
+
+*   zomato reaturant data was used  to cluster similar restaurants together based on their ratings ,cuisines they serve  and cost.
+
+*  Mean ratings was taken from user review collection df and then it will be concatenated with zomato restaurant data.
+
+*   K means as well as agglorative clustering both were used for clustering.
+
+*   Silhoutte score was analysed and it was found that 5 and 10 were the optimal number of clusters.
+
+**Sentiment analysis-**
+
+
+*   There are around 10000 records of reviews and ratings  given by users and from those reviews we need to determine the sentiment of people weather its positive,negative or neutral.
+*   Reviews given by customers is a textual information.So to make it perfect for analysis we need to Textual data preprocessing.
+The various preprocessing steps that are involved are:
+
+• Tokenization
+
+• Punctuation Mark Removal
+
+• Stop Word Removal
+
+• Lemmatization
+
+*   Word net Lemmatizer was used for lemmatization.
+
+*   Sentiment analysis was done using TextBlob.TextBlob is a python library for Natural Language Processing (NLP).TextBlob actively used Natural Language ToolKit (NLTK) to achieve its tasks. 
+
+*   TextBlob returns polarity and subjectivity of a sentence. Polarity lies between [-1,1], -1 defines a negative sentiment and 1 defines a positive sentiment.
+
+*   TF-IDF vectorizer was used to convert textual informationinto vector form. 
+
+*   people who had positive sentiments had given mean ratings of 4.07 out of 5. People who had negative sentiment have given least mean ratings of only 
+1.73 out of 5. People who had neutral sentiments have given mean review in between positive and negative.
+
+*  Logistic regression ,Naive bayes,Random forest,Adaboost,Xgboost,SVM models were used for predicting sentiments using vectorized reviews.
+
+* The best performing models are Xgboost,adaboost and SVM which perform well on both train as well as test data with train accuracy around 0.99 and test accuracy around 0.94.
+
 # Conclusions-
 
 *   Restaurants which have price between 400 -1500 are most in numbers.
